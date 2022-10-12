@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 //.errorActivity(YourCustomErrorActivity.class) //崩溃后的错误activity
                 //.eventListener(new YourCustomEventListener()) //崩溃后的错误监听
                 .apply();
+
+        //3s之后跳转到登录界面
         DelayUtils.delayStartActivity(this, LoginActivity.class,3000);
     }
 }

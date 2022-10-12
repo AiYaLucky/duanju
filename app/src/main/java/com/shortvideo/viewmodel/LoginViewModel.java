@@ -1,7 +1,6 @@
 package com.shortvideo.viewmodel;
 
 import android.app.Application;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 
@@ -35,14 +34,7 @@ public class LoginViewModel extends BaseViewModel {
     public BindingCommand loginOnClickCommand = new BindingCommand(new BindingAction() {
         @Override
         public void call() {
-            System.out.println(account.get());
+            //todo 具体的登陆逻辑代码
         }
     });
-
-    public View.OnClickListener loginOnClick = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            System.out.println(account.get());
-        }
-    };
 }

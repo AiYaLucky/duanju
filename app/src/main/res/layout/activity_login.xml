@@ -150,7 +150,7 @@
                     android:textSize="20sp"
                     android:layout_gravity="center"
                     android:paddingBottom="20dp"
-                    android:onClick="@{viewModel.loginOnClick}"
+                    binding:onClickCommand="@{viewModel.loginOnClickCommand}"
                     android:text="@string/signIn"
                     android:background="@drawable/btn_bg" />
 

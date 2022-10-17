@@ -3,8 +3,6 @@ package com.shortvideo.utils;
 import android.content.Context;
 import android.text.TextUtils;
 
-import me.goldze.mvvmhabit.BuildConfig;
-
 import java.io.File;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -87,7 +85,7 @@ public class RetrofitClient {
                 .sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)
                 .addInterceptor(new LoggingInterceptor
                         .Builder()//构建者模式
-                        .loggable(BuildConfig.DEBUG) //是否开启日志打印
+                        .loggable(true) //是否开启日志打印
                         .setLevel(Level.BASIC) //打印的等级
                         .log(Platform.INFO) // 打印类型
                         .request("Request") // request的Tag
@@ -99,7 +97,7 @@ public class RetrofitClient {
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .connectionPool(new ConnectionPool(8, 15, TimeUnit.SECONDS))
-                // 这里你可以根据自己的机型设置同时连接的个数和时间，我这里8个，和每个保持时间为10s
+                // 这里你可以根据自己的机型设置同时连接的个数和时间，我这里8个，和每个保持时间为15s
                 .build();
         retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
@@ -138,7 +136,6 @@ public class RetrofitClient {
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber);
-
         return null;
     }
 }

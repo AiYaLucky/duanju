@@ -1,6 +1,10 @@
 package com.shortvideo.ObserverData;
 
+import com.blankj.utilcode.util.ActivityUtils;
+import com.blankj.utilcode.util.GsonUtils;
 import com.google.gson.JsonObject;
+import com.shortvideo.requestData.ServerBack;
+import com.shortvideo.ui.HomeActivity;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -19,7 +23,11 @@ public class DataUpdate implements Observer<JsonObject> {
 
     @Override
     public void onNext(JsonObject jsonObject) {
-        System.out.println(jsonObject);
+        ServerBack serverBack = GsonUtils.fromJson(String.valueOf(jsonObject), ServerBack.class);
+        if (serverBack.getCode() == 1){
+            return;
+        }
+        ActivityUtils.startActivity(HomeActivity.class);
     }
 
     @Override
@@ -29,6 +37,6 @@ public class DataUpdate implements Observer<JsonObject> {
 
     @Override
     public void onComplete() {
-
+        System.out.println(123);
     }
 }

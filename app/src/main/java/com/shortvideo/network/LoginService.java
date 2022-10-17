@@ -1,4 +1,4 @@
-package com.shortvideo.net;
+package com.shortvideo.network;
 
 import com.google.gson.JsonObject;
 
@@ -15,5 +15,8 @@ import retrofit2.http.POST;
 public interface LoginService {
 
     @POST("user/login")
-    Observable<JsonObject> doLogin(@Body JsonObject string);
+    Observable<JsonObject> login(@Body JsonObject string);
+
+    @POST("user/register")
+    Observable<JsonObject> register(@Body JsonObject string);
 }

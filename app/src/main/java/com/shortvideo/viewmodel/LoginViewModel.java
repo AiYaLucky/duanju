@@ -1,21 +1,17 @@
 package com.shortvideo.viewmodel;
 
 import android.app.Application;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.text.TextUtils;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 
 import androidx.databinding.ObservableField;
 
 
-import com.blankj.utilcode.util.ColorUtils;
 import com.google.gson.JsonObject;
 
 import com.shortvideo.ObserverData.DataUpdate;
-import com.shortvideo.net.LoginService;
+import com.shortvideo.network.LoginService;
 import com.shortvideo.utils.RetrofitClient;
 
 import me.goldze.mvvmhabit.base.BaseModel;
@@ -61,6 +57,7 @@ public class LoginViewModel extends BaseViewModel<BaseModel> {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("account", account.get());
         jsonObject.addProperty("password", password.get());
-        RetrofitClient.execute(loginService.doLogin(jsonObject), new DataUpdate());
+        JsonObject execute = RetrofitClient.execute(loginService.login(jsonObject), new DataUpdate());
+        System.out.println(123);
     });
 }

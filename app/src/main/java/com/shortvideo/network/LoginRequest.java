@@ -2,7 +2,7 @@ package com.shortvideo.network;
 
 import com.google.gson.JsonObject;
 
-import io.reactivex.Observable;
+import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
@@ -12,11 +12,11 @@ import retrofit2.http.POST;
  * @Version 1.0
  * Created by IntelliJ IDEA.
  */
-public interface LoginService {
+public interface LoginRequest {
 
     @POST("user/login")
-    Observable<JsonObject> login(@Body JsonObject string);
+//    Observable<JsonObject> login(@Body JsonObject string);
+    Call<JsonObject> login(@Body JsonObject string);
 
-    @POST("user/register")
-    Observable<JsonObject> register(@Body JsonObject string);
+
 }

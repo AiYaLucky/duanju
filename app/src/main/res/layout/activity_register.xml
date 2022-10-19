@@ -7,7 +7,7 @@
 
         <variable
                 name="viewModel"
-                type="com.shortvideo.viewmodel.LoginViewModel" />
+                type="com.shortvideo.viewmodel.RegisterViewModel" />
     </data>
 
     <LinearLayout
@@ -30,11 +30,11 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="40dp"
                     android:textSize="42sp"
-                    android:text="@string/signIn" />
+                    android:text="@string/signUp" />
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/layout_login"
+                android:id="@+id/layout_register"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
@@ -43,37 +43,28 @@
                 android:orientation="vertical">
 
             <EditText
-                    android:id="@+id/login_account"
+                    android:id="@+id/reg_account"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/login_hint_account"
-                    android:text="@={viewModel.account}"
+                    android:hint="@string/reg_account"
                     android:gravity="center"
                     android:layout_marginTop="20dp" />
 
-            <RelativeLayout
+            <EditText
+                    android:id="@+id/reg_password"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:hint="@string/reg_password"
+                    android:layout_marginTop="40dp" />
 
-                <EditText
-                        android:id="@+id/login_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:inputType="textPassword"
-                        android:gravity="center"
-                        android:text="@={viewModel.password}"
-                        android:hint="@string/login_hint_password"
-                        android:layout_marginTop="40dp" />
-
-                <View
-                        android:id="@+id/login_show_password"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignEnd="@+id/login_password"
-                        android:layout_alignBottom="@+id/login_password"
-                        android:background="@drawable/ic_password_eye"
-                        android:layout_marginBottom="15dp" />
-            </RelativeLayout>
+            <EditText
+                    android:id="@+id/reg_repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:hint="@string/reg_repassword"
+                    android:layout_marginTop="40dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,27 +74,27 @@
                 android:orientation="vertical"
                 android:gravity="center_vertical">
 
-            <!--   登录按钮    -->
+            <!--   注册按钮    -->
             <Button
-                    android:id="@+id/signIn"
+                    android:id="@+id/signUp"
                     android:layout_width="140dp"
                     android:layout_height="80dp"
                     android:textSize="20sp"
                     android:layout_gravity="center"
+                    binding:onClickCommand="@{viewModel.registerClickCommand}"
                     android:paddingBottom="20dp"
-                    binding:onClickCommand="@{viewModel.loginOnClickCommand}"
-                    android:text="@string/signIn"
+                    android:text="@string/signUp"
                     android:background="@drawable/btn_bg" />
             <!--   前往注册    -->
             <TextView
                     android:id="@+id/toSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/register"
-                    binding:onClickCommand="@{viewModel.toRegisterCommand}"
+                    binding:onClickCommand="@{viewModel.toLoginCommand}"
+                    android:text="@string/login"
                     android:layout_gravity="center_horizontal"
                     android:textColor="#001AFF" />
-
         </LinearLayout>
     </LinearLayout>
+
 </layout>

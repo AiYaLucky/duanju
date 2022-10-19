@@ -1,5 +1,8 @@
 package com.shortvideo.requestData;
 
+import com.blankj.utilcode.util.GsonUtils;
+import com.shortvideo.User;
+
 /**
  * 接收服务器返回的通用结构
  * @Author: xu xiao wei
@@ -43,5 +46,9 @@ public class ServerBack {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public User dataToJsonObject(){
+        return GsonUtils.fromJson(this.getData(), User.class);
     }
 }

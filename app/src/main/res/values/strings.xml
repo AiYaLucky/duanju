@@ -11,4 +11,5 @@
     <string name="reg_password">密码</string>
     <string name="reg_account">手机号码</string>
     <string name="reg_code">验证码</string>
+    <string name="autoLogin">自动登录</string>
 </resources>

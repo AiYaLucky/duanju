@@ -5,4 +5,8 @@
     <string name="nav_item_mine">我的</string>
     <string name="nav_item_msg">消息</string>
     <string name="username">发布者名字</string>
+    <string name="home">首 页</string>
+    <string name="collection">收 藏</string>
+    <string name="msg">消 息</string>
+    <string name="mine">我 的</string>
 </resources>

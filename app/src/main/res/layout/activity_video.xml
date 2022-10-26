@@ -9,7 +9,7 @@
             android:id="@+id/rev_video"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none" />
+            android:scrollbars="vertical" />
 
     <LinearLayout
             android:id="@+id/ly_bottom"
@@ -25,9 +25,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="首页"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:text="@string/home"
+                android:textColor="@drawable/bottom_select"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         <TextView
@@ -36,19 +36,19 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="同城"
-                android:textColor="#f2f2f2"
-                android:textSize="16sp"
+                android:text="@string/collection"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-        <ImageView
-                android:id="@+id/iv_video"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:src="@mipmap/tiktok_bg_add" />
+<!--        <ImageView-->
+<!--                android:id="@+id/act_video_add"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:paddingTop="10dp"-->
+<!--                android:paddingBottom="10dp"-->
+<!--                android:src="@mipmap/tiktok_bg_add" />-->
 
         <TextView
                 android:id="@+id/tv_message"
@@ -56,9 +56,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="消息"
-                android:textColor="#f2f2f2"
-                android:textSize="16sp"
+                android:text="@string/msg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         <TextView
@@ -67,9 +67,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="我"
-                android:textColor="#f2f2f2"
-                android:textSize="16sp"
+                android:text="@string/mine"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold" />
     </LinearLayout>
 

@@ -1,18 +1,8 @@
 <resources>
-    <string name="app_name">shortVideo</string>
-    <string name="login_hint_account">请输入账号</string>
-    <string name="login_hint_password">请输入密码</string>
-    <string name="signIn">登 录</string>
-    <string name="signUp">注 册</string>
-    <string name="register">注册新账号</string>
-    <string name="login">前往登录</string>
-    <string name="reg_phone">电话号码</string>
-    <string name="reg_repassword">确认密码</string>
-    <string name="reg_password">密码</string>
-    <string name="reg_account">手机号码</string>
-    <string name="reg_code">验证码</string>
-    <string name="autoLogin">自动登录</string>
-    <string name="home">主页</string>
-    <string name="favorite">喜欢</string>
-    <string name="mine">我的</string>
+    <string name="app_name">短剧</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="nav_item_home">主页</string>
+    <string name="nav_item_mine">我的</string>
+    <string name="nav_item_msg">消息</string>
+    <string name="username">发布者名字</string>
 </resources>

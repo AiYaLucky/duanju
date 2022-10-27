@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * Created by 钉某人
- * github: https://github.com/DingMouRen
- * email: naildingmouren@gmail.com
+ * 页面布局的管理
  */
 
 public class ViewPagerLayoutManager extends LinearLayoutManager {

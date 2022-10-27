@@ -8,14 +8,22 @@
     <com.aiyalucky.duanju.CustomJzvd.JzvdStdVideo
             android:id="@+id/videoplayer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rev_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:scrollbars="vertical" />
+    </com.aiyalucky.duanju.CustomJzvd.JzvdStdVideo>
 
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="5dp"
             android:orientation="vertical">
 
         <!--发布者名字-->
@@ -30,35 +38,45 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:lineSpacingExtra="3dp"
                 android:maxWidth="260dp"
-                android:text="不顾苹果反对，欧盟要求所有手机统一充电接口，还要求电池可拆卸，"
+                android:text="替嫁给轮椅上的他？事情没那么简单！"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:maxWidth="260dp"
+                android:onClick="onVideoList"
+                android:layout_marginTop="10dp"
+                android:text="替嫁娇妻 更新至1集|选集"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
-        <!--分类介绍-->
-        <TextView
-                android:id="@+id/tv_music_name"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:drawableLeft="@drawable/icon_video_logo"
-                android:drawablePadding="5dp"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:singleLine="true"
-                android:text="果粉之家-创作的原声"
-                android:textColor="@android:color/white"
-                android:textSize="14sp" />
+        <!--        &lt;!&ndash;分类介绍&ndash;&gt;-->
+        <!--        <TextView-->
+        <!--                android:id="@+id/tv_music_name"-->
+        <!--                android:layout_width="120dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="5dp"-->
+        <!--                android:drawableLeft="@drawable/icon_video_logo"-->
+        <!--                android:drawablePadding="5dp"-->
+        <!--                android:ellipsize="marquee"-->
+        <!--                android:marqueeRepeatLimit="marquee_forever"-->
+        <!--                android:singleLine="true"-->
+        <!--                android:text="果粉之家-创作的原声"-->
+        <!--                android:textColor="@android:color/white"-->
+        <!--                android:textSize="14sp" />-->
     </LinearLayout>
 
     <!--右侧菜单-->
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:layout_marginRight="12dp"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="10dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -118,29 +136,22 @@
                 android:textColor="@android:color/white"
                 android:textSize="12sp" />
 
-        <!--        <item name="android:layout_width">wrap_content</item>-->
-        <!--        <item name="android:layout_height">wrap_content</item>-->
-        <!--        <item name="android:layout_marginTop">15dp</item>-->
-        <!--        <item name="android:drawablePadding">2dp</item>-->
-        <!--        <item name="android:gravity">center</item>-->
-        <!--        <item name="android:textColor">@android:color/white</item>-->
-        <!--        <item name="android:textSize">12sp</item>-->
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:drawableTop="@mipmap/video_btn_share"
-                android:drawablePadding="2dp"
-                android:gravity="center"
-                android:text="1111"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
+        <!--        <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="18dp"-->
+        <!--                android:drawableTop="@mipmap/video_btn_share"-->
+        <!--                android:drawablePadding="2dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="1111"-->
+        <!--                android:textColor="@android:color/white"-->
+        <!--                android:textSize="12sp" />-->
 
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
-                android:layout_marginBottom="58dp"
-                android:background="@drawable/video_music_play" />
+        <!--        <ImageView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="38dp"-->
+        <!--                android:layout_marginBottom="58dp"-->
+        <!--                android:background="@drawable/video_music_play" />-->
     </LinearLayout>
 </FrameLayout>

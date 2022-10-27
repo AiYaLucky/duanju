@@ -1,9 +1,11 @@
 package com.aiyalucky.duanju.ui;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +17,9 @@ import com.aiyalucky.duanju.R;
 import com.aiyalucky.duanju.video.OnViewPagerListener;
 import com.aiyalucky.duanju.video.TikTokRecyclerViewAdapter;
 import com.aiyalucky.duanju.video.ViewPagerLayoutManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.jzvd.Jzvd;
 
@@ -114,5 +119,36 @@ public class VideoActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /**
+     * 剧集选择界面
+     * @param view textview
+     */
+    public void onVideoList(View view){
+        List<String> itmes = new ArrayList<>();
+        itmes.add("替嫁娇妻 1");
+        itmes.add("替嫁娇妻 2");
+        itmes.add("替嫁娇妻 3");
+        itmes.add("替嫁娇妻 4");
+        itmes.add("替嫁娇妻 5");
+        itmes.add("替嫁娇妻 6");
+        itmes.add("替嫁娇妻 7");
+        itmes.add("替嫁娇妻 8");
+        itmes.add("替嫁娇妻 9");
+        itmes.add("替嫁娇妻 10");
+        String[] array = new String[0];
+        AlertDialog.Builder alBuilder = new AlertDialog.Builder(this);
+        alBuilder.setItems(itmes.toArray(array), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.out.println(dialog);
+                System.out.println(which);
+            }
+        });
+        AlertDialog dialog = alBuilder.create();
+        dialog.setTitle("替嫁娇妻title");
+        dialog.show();
     }
 }

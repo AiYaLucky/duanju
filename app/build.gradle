@@ -57,9 +57,12 @@ dependencies {
     //http框架
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     //视频播放框架引入
-//    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.3-release-jitpack'
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.3-release-jitpack'
     implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
 
     //图片轮播banner框架
-    implementation 'com.jude:rollviewpager:1.4.6'
+    implementation 'io.github.youth5201314:banner:2.2.2'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
 }

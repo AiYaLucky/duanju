@@ -17,7 +17,7 @@
             android:usesCleartextTraffic="true"
             tools:targetApi="31">
         <activity
-                android:name=".VideoListManager"
+                android:name=".ui.VideoListManager"
                 android:exported="false">
             <meta-data
                     android:name="android.app.lib_name"

@@ -5,6 +5,8 @@
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:orientation="vertical"
         tools:context=".ui.HallActivity">
 
@@ -13,8 +15,6 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_height="200dp" />
 
     <com.youth.banner.indicator.RoundLinesIndicator
@@ -24,4 +24,104 @@
             android:layout_below="@+id/banner"
             android:layout_centerHorizontal="true"
             android:visibility="gone" />
+    <!--推荐标题-->
+    <RelativeLayout
+            android:id="@+id/tuijian_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/banner">
+
+        <TextView
+                android:id="@+id/tuijian_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tuijian" />
+
+        <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="80dp"
+                android:text="@string/refresh"
+                android:gravity="center"
+                android:background="@color/purple_200"
+                android:layout_height="match_parent" />
+    </RelativeLayout>
+    <!--推荐内容-->
+    <GridLayout
+            android:id="@+id/tuijian"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/tuijian_title">
+        <!--具体推荐的内容item1-->
+        <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_column="0"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/video_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/black"
+                    android:contentDescription="@string/video_loading_failed" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tuijian_name"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/video_image" />
+        </RelativeLayout>
+
+        <!--具体推荐的内容item2-->
+        <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:layout_marginStart="15dp"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/video_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/black"
+                    android:contentDescription="@string/video_loading_failed" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tuijian_name"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/video_image1" />
+        </RelativeLayout>
+        <!--具体推荐的内容item3-->
+        <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/video_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/black"
+                    android:contentDescription="@string/video_loading_failed" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/tuijian_name"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/video_image2" />
+        </RelativeLayout>
+    </GridLayout>
 </RelativeLayout>

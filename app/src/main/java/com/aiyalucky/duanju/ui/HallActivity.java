@@ -34,6 +34,9 @@ public class HallActivity extends AppCompatActivity {
         initBanner();
     }
 
+    /**
+     * banner轮播图
+     */
     private void initBanner() {
         banner.setAdapter(new BannerImageAdapter<DataBean>(DataBean.getPictureData()) {
             @Override

@@ -9,4 +9,7 @@
     <string name="collection">收 藏</string>
     <string name="msg">消 息</string>
     <string name="mine">我 的</string>
+    <string name="tuijian">推荐</string>
+    <string name="tuijian_name">推荐视频名称</string>
+    <string name="refresh">刷新</string>
 </resources>

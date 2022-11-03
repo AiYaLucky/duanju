@@ -419,7 +419,8 @@
     <!--  底部菜单栏  todo 这里后面还是看看使用 -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

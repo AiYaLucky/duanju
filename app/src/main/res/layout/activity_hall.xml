@@ -7,7 +7,6 @@
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:orientation="vertical"
         tools:context=".ui.HallActivity">
 
     <!--  轮播图   -->
@@ -16,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
             android:layout_height="200dp" />
-
+    <!--  轮播图导航点  -->
     <com.youth.banner.indicator.RoundLinesIndicator
             android:id="@+id/indicator"
             android:layout_width="wrap_content"
@@ -24,104 +23,403 @@
             android:layout_below="@+id/banner"
             android:layout_centerHorizontal="true"
             android:visibility="gone" />
-    <!--推荐标题-->
-    <RelativeLayout
-            android:id="@+id/tuijian_title"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginBottom="5dp"
-            android:layout_below="@+id/banner">
 
-        <TextView
-                android:id="@+id/tuijian_text"
-                android:textSize="20sp"
-                android:textStyle="bold"
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
+            android:layout_marginBottom="60dp"
+            android:scrollbars="vertical">
+
+        <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/tuijian" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <!--推荐标题-->
+            <RelativeLayout
+                    android:id="@+id/tuijian_title"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
 
-        <TextView
-                android:layout_alignParentEnd="true"
-                android:layout_width="80dp"
-                android:text="@string/refresh"
-                android:gravity="center"
-                android:background="@color/purple_200"
-                android:layout_height="match_parent" />
-    </RelativeLayout>
-    <!--推荐内容-->
-    <GridLayout
-            android:id="@+id/tuijian"
+                <TextView
+                        android:id="@+id/tuijian_text"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/tuijian" />
+
+                <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="80dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/refresh"
+                        android:gravity="center"
+                        android:background="@color/blue_slow"
+                        android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <!--推荐内容-->
+                    <GridLayout
+                            android:id="@+id/tuijian"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_marginTop="10dp">
+                        <!--具体推荐的内容item1-->
+                        <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_column="0"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/tuijian_image_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:background="@color/black"
+                                    android:contentDescription="@string/video_loading_failed" />
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/tuijian_name"
+                                    android:textSize="16sp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_below="@+id/tuijian_image_1" />
+                        </RelativeLayout>
+                        <!--具体推荐的内容item2-->
+                        <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_column="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/tuijian_image_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:background="@color/black"
+                                    android:contentDescription="@string/video_loading_failed" />
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/tuijian_name"
+                                    android:textSize="16sp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_below="@+id/tuijian_image_2" />
+                        </RelativeLayout>
+                        <!--具体推荐的内容item3-->
+                        <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_column="2"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/tuijian_image_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:background="@color/black"
+                                    android:contentDescription="@string/video_loading_failed" />
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/tuijian_name"
+                                    android:textSize="16sp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_below="@+id/tuijian_image_3" />
+                        </RelativeLayout>
+                        <!--具体推荐的内容item4-->
+                        <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_column="3"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/tuijian_image_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:background="@color/black"
+                                    android:contentDescription="@string/video_loading_failed" />
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/tuijian_name"
+                                    android:textSize="16sp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_below="@+id/tuijian_image_4" />
+                        </RelativeLayout>
+                    </GridLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--随机标题-->
+            <RelativeLayout
+                    android:id="@+id/suiji_title"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                <TextView
+                        android:id="@+id/suiji_text"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/suiji" />
+
+                <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="80dp"
+                        android:text="@string/refresh"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/blue_slow"
+                        android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <!--随机推荐-->
+                <GridLayout
+                        android:id="@+id/suiji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp">
+                    <!--具体推荐的内容item1-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_column="0"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/suiji_image_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/suiji_image_1" />
+                    </RelativeLayout>
+
+                    <!--具体推荐的内容item2-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_column="1"
+                            android:layout_marginStart="15dp"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/suiji_image_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/suiji_image_2" />
+                    </RelativeLayout>
+                    <!--具体推荐的内容item3-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_column="2"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/suiji_image_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/suiji_image_3" />
+                    </RelativeLayout>
+                    <!--具体推荐的内容item4-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_column="3"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/suiji_image_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/suiji_image_4" />
+                    </RelativeLayout>
+                </GridLayout>
+            </HorizontalScrollView>
+            <!--其他标题-->
+            <RelativeLayout
+                    android:id="@+id/other_title"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                <TextView
+                        android:id="@+id/other_text"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/other" />
+
+                <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="80dp"
+                        android:text="@string/refresh"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/blue_slow"
+                        android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <!--其他推荐-->
+                <GridLayout
+                        android:id="@+id/other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="10dp">
+                    <!--具体推荐的内容item1-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_column="0"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/other_image_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/other_image_1" />
+                    </RelativeLayout>
+
+                    <!--具体推荐的内容item2-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_column="1"
+                            android:layout_marginStart="15dp"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/other_image_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/other_image_2" />
+                    </RelativeLayout>
+                    <!--具体推荐的内容item3-->
+                    <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_column="2"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:id="@+id/other_image_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/black"
+                                android:contentDescription="@string/video_loading_failed" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/tuijian_name"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/other_image_3" />
+                    </RelativeLayout>
+                </GridLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+    <!--  底部菜单栏  todo 这里后面还是看看使用 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_below="@+id/tuijian_title">
-        <!--具体推荐的内容item1-->
-        <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_column="0"
-                android:layout_height="match_parent">
+            android:layout_height="60dp">
 
-            <ImageView
-                    android:id="@+id/video_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/black"
-                    android:contentDescription="@string/video_loading_failed" />
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tuijian_name"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/video_image" />
-        </RelativeLayout>
-
-        <!--具体推荐的内容item2-->
-        <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_column="1"
-                android:layout_marginStart="15dp"
-                android:layout_height="match_parent">
-
-            <ImageView
-                    android:id="@+id/video_image1"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/black"
-                    android:contentDescription="@string/video_loading_failed" />
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tuijian_name"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/video_image1" />
-        </RelativeLayout>
-        <!--具体推荐的内容item3-->
-        <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_marginStart="15dp"
-                android:layout_column="2"
-                android:layout_height="match_parent">
-
-            <ImageView
-                    android:id="@+id/video_image2"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/black"
-                    android:contentDescription="@string/video_loading_failed" />
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tuijian_name"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/video_image2" />
-        </RelativeLayout>
-    </GridLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

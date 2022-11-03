@@ -9,7 +9,21 @@
     <string name="collection">收 藏</string>
     <string name="msg">消 息</string>
     <string name="mine">我 的</string>
-    <string name="tuijian">推荐</string>
+    <string name="tuijian">推 荐</string>
     <string name="tuijian_name">推荐视频名称</string>
-    <string name="refresh">刷新</string>
+    <string name="refresh">刷 新</string>
+    <string name="suiji">随 机</string>
+    <string name="other">其他</string>
+    <string name="login_hint_account">请输入账号</string>
+    <string name="login_hint_password">请输入密码</string>
+    <string name="signIn">登 录</string>
+    <string name="signUp">注 册</string>
+    <string name="register">注册新账号</string>
+    <string name="login">前往登录</string>
+    <string name="reg_phone">电话号码</string>
+    <string name="reg_repassword">确认密码</string>
+    <string name="reg_password">密码</string>
+    <string name="reg_account">手机号码</string>
+    <string name="reg_code">验证码</string>
+    <string name="autoLogin">自动登录</string>
 </resources>
